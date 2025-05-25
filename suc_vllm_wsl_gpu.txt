@@ -1,0 +1,231 @@
+
+الحمد لله
+اشتغا vllm gpu wsl win 11
+
+
+
+
+https://docs.vllm.ai/en/v0.9.0/getting_started/examples/examples_index.html
+
+https://github.com/vllm-project/vllm/blob/main/examples/offline_inference/basic/basic.py
+
+
+https://docs.astral.sh/uv/guides/scripts/#running-a-script-with-dependencies
+
+
+
+
+
+
+
+m@DESKTOP-MO2BF49:~$ uv venv --python 3.12 --seed
+source .venv/bin/activate
+Using CPython 3.12.3 interpreter at: /usr/bin/python3.12
+Creating virtual environment with seed packages at: .venv
+ + pip==25.1.1
+Activate with: source .venv/bin/activate
+(m) m@DESKTOP-MO2BF49:~$ uv pip install vllm
+Resolved 145 packages in 4.85s
+Prepared 145 packages in 19m 30s
+Installed 145 packages in 127ms
+ + aiohappyeyeballs==2.6.1
+ + aiohttp==3.12.0
+ + aiosignal==1.3.2
+ + airportsdata==20250523
+ + annotated-types==0.7.0
+ + anyio==4.9.0
+ + astor==0.8.1
+ + attrs==25.3.0
+ + blake3==1.0.5
+ + cachetools==6.0.0
+ + certifi==2025.4.26
+ + charset-normalizer==3.4.2
+ + click==8.2.1
+ + cloudpickle==3.1.1
+ + compressed-tensors==0.9.3
+ + cupy-cuda12x==13.4.1
+ + deprecated==1.2.18
+ + depyf==0.18.0
+ + dill==0.4.0
+ + diskcache==5.6.3
+ + distro==1.9.0
+ + dnspython==2.7.0
+ + einops==0.8.1
+ + email-validator==2.2.0
+ + fastapi==0.115.12
+ + fastapi-cli==0.0.7
+ + fastrlock==0.8.3
+ + filelock==3.18.0
+ + frozenlist==1.6.0
+ + fsspec==2025.5.1
+ + gguf==0.16.3
+ + googleapis-common-protos==1.70.0
+ + grpcio==1.71.0
+ + h11==0.16.0
+ + hf-xet==1.1.2
+ + httpcore==1.0.9
+ + httptools==0.6.4
+ + httpx==0.28.1
+ + huggingface-hub==0.32.0
+ + idna==3.10
+ + importlib-metadata==8.0.0
+ + interegular==0.3.3
+ + jinja2==3.1.6
+ + jiter==0.10.0
+ + jsonschema==4.23.0
+ + jsonschema-specifications==2025.4.1
+ + lark==1.2.2
+ + llguidance==0.7.24
+ + llvmlite==0.44.0
+ + lm-format-enforcer==0.10.11
+ + markdown-it-py==3.0.0
+ + markupsafe==3.0.2
+ + mdurl==0.1.2
+ + mistral-common==1.5.6
+ + mpmath==1.3.0
+ + msgpack==1.1.0
+ + msgspec==0.19.0
+ + multidict==6.4.4
+ + nest-asyncio==1.6.0
+ + networkx==3.4.2
+ + ninja==1.11.1.4
+ + numba==0.61.2
+ + numpy==2.2.6
+ + nvidia-cublas-cu12==12.4.5.8
+ + nvidia-cuda-cupti-cu12==12.4.127
+ + nvidia-cuda-nvrtc-cu12==12.4.127
+ + nvidia-cuda-runtime-cu12==12.4.127
+ + nvidia-cudnn-cu12==9.1.0.70
+ + nvidia-cufft-cu12==11.2.1.3
+ + nvidia-curand-cu12==10.3.5.147
+ + nvidia-cusolver-cu12==11.6.1.9
+ + nvidia-cusparse-cu12==12.3.1.170
+ + nvidia-cusparselt-cu12==0.6.2
+ + nvidia-nccl-cu12==2.21.5
+ + nvidia-nvjitlink-cu12==12.4.127
+ + nvidia-nvtx-cu12==12.4.127
+ + openai==1.82.0
+ + opencv-python-headless==4.11.0.86
+ + opentelemetry-api==1.26.0
+ + opentelemetry-exporter-otlp==1.26.0
+ + opentelemetry-exporter-otlp-proto-common==1.26.0
+ + opentelemetry-exporter-otlp-proto-grpc==1.26.0
+ + opentelemetry-exporter-otlp-proto-http==1.26.0
+ + opentelemetry-proto==1.26.0
+ + opentelemetry-sdk==1.26.0
+ + opentelemetry-semantic-conventions==0.47b0
+ + opentelemetry-semantic-conventions-ai==0.4.9
+ + outlines==0.1.11
+ + outlines-core==0.1.26
+ + packaging==25.0
+ + partial-json-parser==0.2.1.1.post5
+ + pillow==11.2.1
+ + prometheus-client==0.22.0
+ + prometheus-fastapi-instrumentator==7.1.0
+ + propcache==0.3.1
+ + protobuf==4.25.7
+ + psutil==7.0.0
+ + py-cpuinfo==9.0.0
+ + pycountry==24.6.1
+ + pydantic==2.11.5
+ + pydantic-core==2.33.2
+ + pygments==2.19.1
+ + python-dotenv==1.1.0
+ + python-json-logger==3.3.0
+ + python-multipart==0.0.20
+ + pyyaml==6.0.2
+ + pyzmq==26.4.0
+ + ray==2.46.0
+ + referencing==0.36.2
+ + regex==2024.11.6
+ + requests==2.32.3
+ + rich==14.0.0
+ + rich-toolkit==0.14.6
+ + rpds-py==0.25.1
+ + safetensors==0.5.3
+ + scipy==1.15.3
+ + sentencepiece==0.2.0
+ + setuptools==80.8.0
+ + shellingham==1.5.4
+ + six==1.17.0
+ + sniffio==1.3.1
+ + starlette==0.46.2
+ + sympy==1.13.1
+ + tiktoken==0.9.0
+ + tokenizers==0.21.1
+ + torch==2.6.0
+ + torchaudio==2.6.0
+ + torchvision==0.21.0
+ + tqdm==4.67.1
+ + transformers==4.52.3
+ + triton==3.2.0
+ + typer==0.15.3
+ + typing-extensions==4.13.2
+ + typing-inspection==0.4.1
+ + urllib3==2.4.0
+ + uvicorn==0.34.2
+ + uvloop==0.21.0
+ + vllm==0.8.5.post1
+ + watchfiles==1.0.5
+ + websockets==15.0.1
+ + wrapt==1.17.2
+ + xformers==0.0.29.post2
+ + xgrammar==0.1.18
+ + yarl==1.20.0
+ + zipp==3.21.0
+(m) m@DESKTOP-MO2BF49:~$ dir
+1.py  4w3t  New\ Text\ Document.txt
+(m) m@DESKTOP-MO2BF49:~$ uv run 1.py
+INFO 05-24 17:24:36 [__init__.py:239] Automatically detected platform cuda.
+config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 651/651 [00:00<00:00, 12.7MB/s]
+INFO 05-24 17:24:42 [config.py:717] This model supports multiple tasks: {'classify', 'embed', 'reward', 'score', 'generate'}. Defaulting to 'generate'.
+INFO 05-24 17:24:42 [config.py:2003] Chunked prefill is enabled with max_num_batched_tokens=8192.
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 685/685 [00:00<00:00, 12.8MB/s]
+vocab.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 899k/899k [00:00<00:00, 1.98MB/s]
+merges.txt: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 1.54MB/s]
+special_tokens_map.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 441/441 [00:00<00:00, 8.41MB/s]
+generation_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 137/137 [00:00<00:00, 2.90MB/s]
+INFO 05-24 17:24:46 [core.py:58] Initializing a V1 LLM engine (v0.8.5.post1) with config: model='facebook/opt-125m', speculative_config=None, tokenizer='facebook/opt-125m', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=2048, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='auto', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=facebook/opt-125m, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"level":3,"custom_ops":["none"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"use_inductor":true,"compile_sizes":[],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":512}
+WARNING 05-24 17:24:46 [utils.py:2522] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f7d6ad91610>
+INFO 05-24 17:24:47 [parallel_state.py:1004] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0
+WARNING 05-24 17:24:47 [interface.py:314] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.
+INFO 05-24 17:24:47 [cuda.py:221] Using Flash Attention backend on V1 engine.
+WARNING 05-24 17:24:47 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 05-24 17:24:47 [gpu_model_runner.py:1329] Starting to load model facebook/opt-125m...
+INFO 05-24 17:24:48 [weight_utils.py:265] Using model weights format ['*.bin']
+pytorch_model.bin: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 251M/251M [01:12<00:00, 3.46MB/s]
+INFO 05-24 17:26:01 [weight_utils.py:281] Time spent downloading weights for facebook/opt-125m: 69.890848 seconds
+Loading pt checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading pt checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.31it/s]
+Loading pt checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.31it/s]
+
+INFO 05-24 17:26:01 [loader.py:458] Loading weights took 0.30 seconds
+INFO 05-24 17:26:01 [gpu_model_runner.py:1347] Model loading took 0.2389 GiB and 71.213879 seconds
+INFO 05-24 17:26:03 [backends.py:420] Using cache directory: /home/m/.cache/vllm/torch_compile_cache/09bd4dd9c2/rank_0_0 for vLLM's torch.compile
+INFO 05-24 17:26:03 [backends.py:430] Dynamo bytecode transform time: 1.51 s
+INFO 05-24 17:26:04 [backends.py:136] Cache the graph of shape None for later use
+[rank0]:W0524 17:26:04.347000 634 .venv/lib/python3.12/site-packages/torch/_inductor/utils.py:1137] [0/0] Not enough SMs to use max_autotune_gemm mode
+INFO 05-24 17:26:06 [backends.py:148] Compiling a graph for general shape takes 3.43 s
+INFO 05-24 17:26:08 [monitor.py:33] torch.compile takes 4.94 s in total
+INFO 05-24 17:26:09 [kv_cache_utils.py:634] GPU KV cache size: 364,016 tokens
+INFO 05-24 17:26:09 [kv_cache_utils.py:637] Maximum concurrency for 2,048 tokens per request: 177.74x
+INFO 05-24 17:26:19 [gpu_model_runner.py:1686] Graph capturing finished in 10 secs, took 0.19 GiB
+INFO 05-24 17:26:19 [core.py:159] init engine (profile, create kv cache, warmup model) took 17.63 seconds
+INFO 05-24 17:26:19 [core_client.py:439] Core engine process 0 ready.
+Processed prompts: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 11.14it/s, est. speed input: 72.43 toks/s, output: 178.28 toks/s]
+
+Generated Outputs:
+------------------------------------------------------------
+Prompt:    'Hello, my name is'
+Output:    ' Paul J. Gorda and I have been working at PNC since the'
+------------------------------------------------------------
+Prompt:    'The president of the United States is'
+Output:    ' a foreign-born person who has served in the US government and is a US'
+------------------------------------------------------------
+Prompt:    'The capital of France is'
+Output:    ' currently under the control of the government of the French Republic. Its government has adopted'
+------------------------------------------------------------
+Prompt:    'The future of AI is'
+Output:    " uncertain.  The possibilities are endless.\nIt's already in the past though"
+------------------------------------------------------------
+(m) m@DESKTOP-MO2BF49:~$
